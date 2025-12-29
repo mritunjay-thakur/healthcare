@@ -23,8 +23,3 @@ Designed with a clean UI, smooth user experience, and scalable component-based a
 - **HTML5**
 - **CSS3**
 - **Tailwind CSS**
-
----
-
-## 📂 Project Structure
-
