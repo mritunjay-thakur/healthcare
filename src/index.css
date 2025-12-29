@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: "Inter", sans-serif;
+    background: linear-gradient(-45deg, #fffbf5, #f8fdf0, #fff5e6, #f0f8f0);
+    background-size: 400% 400%;
+    animation: gradient 15s ease infinite;
+  }
+}
+
+@layer components {
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20 shadow-lg;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.25),
+      rgba(255, 255, 255, 0.05)
+    );
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1),
+      inset 0 0 0.5px rgba(255, 255, 255, 0.3);
+    border-radius: 1rem;
+  }
+
+  .glass-card {
+    @apply bg-white/70 backdrop-blur-lg border border-white/30 shadow-xl;
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-ayurveda-deep to-ayurveda-herbal bg-clip-text text-transparent;
+  }
+
+  .hero-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(0, 122, 77, 0.1) 0%,
+      rgba(141, 198, 63, 0.1) 50%,
+      rgba(249, 176, 0, 0.05) 100%
+    );
+  }
+
+  .section-padding {
+    @apply px-4 py-16 md:px-8 lg:px-16 lg:py-24;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #8dc63f, #007a4d);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #007a4d, #8dc63f);
+}
+
+* {
+  transition: color 0.3s ease, background-color 0.3s ease,
+    border-color 0.3s ease;
+}
